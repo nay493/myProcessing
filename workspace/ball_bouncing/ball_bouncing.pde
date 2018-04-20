@@ -2,6 +2,11 @@
 //PGraphics pg;
 // Example 10-2: Bouncing ball class
 
+//font
+PFont f;
+float theta;
+//font
+
 //blue Wave
 float freq = 10;
 float amp = 50;
@@ -44,6 +49,9 @@ PImage c;
 //img = c ??
 
 void setup() {
+  
+ // f = createFont("Arial",16,true);
+  f = createFont("Ziggurat-Black", 32);
   //blue Wave
   //size(640, 450);
   background(255);
@@ -91,6 +99,34 @@ void draw(){
 
   background(fillVal);
   
+  
+  
+  textFont(f,18);                  // STEP 3 Specify font to be used
+  fill(0);  // STEP 4 Specify font color
+  //rotate(theta);
+  beginShape();
+vertex(50, 15);
+bezierVertex(50, -5, 90, 5, 50, 40);
+vertex(50, 15);
+bezierVertex(50, -5, 10, 5, 50, 40);
+endShape();
+  
+  text("Welcome All",width/2,height/2);   // STEP 5 Display Text
+  text("Please Enter Keys 1. Up 2. Down 3. Enter To see the Magic",1.2*(width/2),1.2*(height/2));
+  text("V", 0, 60);
+text("O", 15, 65);
+text("T", 30, 70);
+text("A", 45, 75);
+text("R", 60, 80);
+text("Y", 75, 85);
+//text("   ", 75, 85);
+text("T", 90, 90);
+text("E", 105, 95);
+text("C", 120, 100);
+text("H", 135, 105);
+//text("N", 150, 110);
+//text("A", 165, 115);
+  //theta += 0.05;
    // Move and display balls
   ball1.move();
   ball2.move();
@@ -177,6 +213,7 @@ fill(0, 0, 50, 40);
     }
   }
 //blue Wave
+ 
 
 }
 //}

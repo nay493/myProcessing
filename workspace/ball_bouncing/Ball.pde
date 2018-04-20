@@ -37,7 +37,5 @@ public class Ball {
     fill(0, 150);
     //fill(a);
     ellipse(x, y, r*2, r*2);
-    imageMode(CENTER);
-    image(img,x,y);
   }
 }
